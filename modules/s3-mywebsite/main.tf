@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "website_bucket" {
   bucket = var.bucket_name
 
   website {
-    index_document = "index.html"
+    index_document = var.index_file
     error_document = "error.html"
   }
 
@@ -45,7 +45,7 @@ resource "aws_s3_bucket_policy" "website_policy" {
 
 resource "aws_s3_object" "index_file" {
   bucket = aws_s3_bucket.website_bucket.id
-  key    = "index.html"
+  key    = var.index_file
   source = var.index_file
   content_type = "text/html"
 }
@@ -63,3 +63,6 @@ resource "aws_s3_object" "error_file" {
 </html>
 EOT
 }
+
+
+
