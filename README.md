@@ -28,9 +28,3 @@ Después de la implementación, Terraform muestra las siguientes salidas:
 - **Nombre del bucket**
 - **URL pública del sitio web**
 ---
-
-## 🎯 Conclusión
-Este proyecto automatiza el despliegue de una página web estática en S3 utilizando Terraform. Permite una gestión eficiente de la infraestructura y facilita el acceso público al sitio web sin necesidad de servidores adicionales.
-
-🚀 **Listo para ser desplegado con Terraform!**
-
