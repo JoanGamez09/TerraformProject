@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "website_bucket" {
 
 output "bucket_arn" {
   value       = aws_s3_bucket.website_bucket.arn
-  description = "El ARN del bucket S3."
+  description = "Bucket ARN"
 }
 
 resource "aws_s3_bucket_public_access_block" "website_bucket_public_access_block" {
