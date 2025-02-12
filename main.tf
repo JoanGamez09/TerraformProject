@@ -1,10 +1,10 @@
 variable "region" {
-  description = "La región de AWS donde se crearán los recursos."
+  description = "The AWS region where the resources will be created."
   default     = "us-east-1"
 
   validation {
     condition     = var.region == "us-east-1"
-    error_message = "Solo se permite usar la región 'us-east-1'. Por favor, selecciona 'us-east-1' como región."
+    error_message = "Only the ‘us-east-1’ region is allowed. Please select ‘us-east-1’ as the region."
   }
 }
 
@@ -14,7 +14,7 @@ provider "aws" {
 
 module "s3_website" {
   source      = "./modules/s3-mywebsite"
-  bucket_name = "proyectodepractica-${terraform.workspace}"
+  bucket_name = ""BUCKET-NAME"-${terraform.workspace}"
   index_file  = "index.html"
 }
 
