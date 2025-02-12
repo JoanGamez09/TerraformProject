@@ -1,6 +1,6 @@
 output "bucket_name" {
   value = aws_s3_bucket.website_bucket.bucket
-  description = "El nombre del bucket de s3"
+  description = "Bucket name"
 }
 
 output "website_endpoint" {
