@@ -1,15 +1,15 @@
 variable "bucket_name" {
-  description = "Nombre del bucket S3"
+  description = "Bucket name"
   type        = string
 }
 
 variable "index_file" {
-  description = "Ruta al archivo index.html"
+  description = "index.html path"
   type        = string
 }
 
 variable "environment" {
-  description = "Etiqueta para identificar el entorno"
+  description = "Enviroment tag"
   type        = string
   default     = "production"
 }
