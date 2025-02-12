@@ -1,30 +1,30 @@
-# Terraform - Implementación de una Página Web en S3
+# Terraform - Static Website Deployment on S3
 
-## Descripción del Proyecto
-Este proyecto utiliza **Terraform** para desplegar una página web estática en **S3**. Se crea un bucket de S3 que aloja el sitio web y se genera automáticamente una URL pública para acceder a la página.
-
----
-
-## Tecnologías Utilizadas
-- **Terraform** (para la infraestructura como código)
-- **S3** (para alojar la página web estática)
+## Project Description
+This project uses Terraform to deploy a static website on a AWS S3. An S3 bucket is created to host the website, and a public URL is automatically generated to access the webpage.
 
 ---
 
-## Flujo de Implementación
+## Technologies Used
+- **Terraform** (for infrastructure as code)
+- **S3** (to host the static website)
 
-### 1️⃣ **Configuración de la Región AWS**
-El proyecto está configurado para ejecutarse exclusivamente en la región `us-east-1`. Se valida que la región ingresada sea correcta antes de proceder con la creación de recursos.
+---
 
-### 2️⃣ **Creación del Bucket S3**
-Terraform define un módulo `s3_website` que crea un bucket de S3 donde se almacena la página web. El bucket es nombrado dinámicamente según el workspace de Terraform.
+## Steps
 
-### 3️⃣ **Carga de la Página Web**
-El bucket está configurado para servir archivos estáticos, utilizando `index.html` como página principal.
+### 1️⃣ **AWS Region Configuration**
+The project is configured to run exclusively in the us-east-1 region. The provided region is validated to ensure it is correct before proceeding with resource creation.
 
-### 4️⃣ **Generación de Salidas (Outputs)**
-Después de la implementación, Terraform muestra las siguientes salidas:
-- **ARN del bucket**
-- **Nombre del bucket**
-- **URL pública del sitio web**
+### 2️⃣ **S3 Bucket Creation**
+Terraform defines an `s3_website` module that creates an S3 bucket where the website will be stored. The bucket is named dynamically based on the Terraform workspace.
+
+### 3️⃣ **Uploading the Website**
+The bucket is configured to serve static files, with `index.html` as the main page.
+
+### 4️⃣ **Generation of Outputs**
+After deployment, Terraform displays the following outputs:
+- **Bucket ARN**
+- **Bucket Name**
+- **Public Website URL**
 ---
